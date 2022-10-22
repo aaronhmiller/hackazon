@@ -12,4 +12,8 @@ docker build --rm -t bepsoccer/all-in-one-hackazon .
 then run via: 
 docker run --name hackazon -d -p 80:80 bepsoccer/all-in-one-hackazon
 
+To deploy to Kubernetes, use 
+
+`kubectl apply -f hackazon-deployment.yaml,hackazon-service.yaml`
+
 Login into hackazon at http:// (( your host here... )) and begin configuring...  You can just select to use the existing db password as it is set in the startup script.  The admin password will be the same as the db password and is echoed at startup and can be found in /hackazon-db-pw.txt.
